@@ -33,6 +33,7 @@ namespace Integration
             response.EnsureSuccessStatusCode();
             var responseString = await response.Content.ReadAsStringAsync();
             var owners = JsonConvert.DeserializeObject<List<Owner>>(responseString);
+
             // Assert
             Assert.NotEmpty(owners);
         }
